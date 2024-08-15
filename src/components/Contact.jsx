@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import emailjs from 'emailjs-com';
-import backgroundImage from '../assets/hero2.jpg';
+import backgroundImage from '../assets/tour2.jpg';
 
 const ContactUs = () => {
 
@@ -58,14 +58,14 @@ const ContactUs = () => {
           
       
           <div className="lg:w-1/2  ml-2 mb-8 lg:mb-0 lg:pr-8 pl-4 pt-4 mr-10 bg-slate-200">
-            <h2 className="text-4xl font-bold mb-6 text-black">Contact Us</h2>
-            <p className="text-lg mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6 text-black">Contact Us</h2>
+            <p className="text-base sm:text-lg mb-4 ">
               <strong>Telephone:</strong> 1234567890
             </p>
-            <p className="text-lg mb-4">
+            <p className="text-base sm:text-lg mb-2 sm:mb-4 ">
               <strong>Address:</strong> 457, 5th cross, Chanakyapuri,Delhi
             </p>
-            <p className="text-lg mb-4">
+            <p className="text-base sm:text-lg mb-2 sm:mb-4">
               <strong>Email:</strong> easytransit@gmail.com
             </p>
           </div>

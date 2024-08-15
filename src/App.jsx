@@ -8,6 +8,7 @@ import Gallery from "./components/Gallery"
 import Testimony from "./components/Testimony"
 import ContactUs from "./components/Contact"
 import Footer from "./components/Footer"
+import Label from "./components/Label"
 function App() {
 
 
@@ -19,6 +20,7 @@ function App() {
   <FeaturesSection/>
   <PopularTours/>
   <Gallery/>
+  <Label/>
   <Testimony/>
   <ContactUs />
   <Footer/>

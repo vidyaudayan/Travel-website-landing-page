@@ -20,6 +20,8 @@
 .card:hover::before {
   box-shadow: 0 0 20px 5px rgba(66, 153, 225, 0.6); /* Blue glow effect on hover */
 }
+
+
 /* Custom animation for the cards */
 @keyframes slideIn {
   from {
@@ -43,7 +45,7 @@
 }
 
 @media (min-width: 1024px) {
-  /* Ensure the main image is centered in the grid on larger screens */
+  
   .main-image {
     grid-column: 3 / span 2;
     grid-row: 1 / span 2;
