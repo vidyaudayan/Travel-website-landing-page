@@ -11,6 +11,25 @@ const ContactUs = () => {
     email: '',
     message: ''
   });
+  const [errors, setErrors] = useState({
+    name: '',
+    email: '',
+    tel: '',
+    message: ''
+  });
+
+  const validate = () => {
+    const newErrors = {};
+    if (!formData.name.trim()) newErrors.name = 'Name is required';
+    if (!formData.email.trim()) newErrors.email = 'Email is required';
+    else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Email is invalid';
+    if (!formData.tel.trim()) newErrors.tel = 'Phone number is required';
+    else if (!/^\d{10}$/.test(formData.tel)) newErrors.tel = 'Phone number is invalid';
+    if (!formData.message.trim()) newErrors.message = 'Message is required';
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,6 +37,11 @@ const ContactUs = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (validate()) {
+   
+    
+  
     const serviceID =  import.meta.env.VITE_EMAILJS_SERVICE_ID;
     const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
     const userID =  import.meta.env.VITE_EMAILJS_USER_ID;
@@ -38,6 +62,7 @@ const ContactUs = () => {
         email: '',
         message: '',
       });
+    }
   };
   return (
     <section id='contact'
@@ -79,24 +104,29 @@ const ContactUs = () => {
                 placeholder="Name"
                 className="p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
+              {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
               <input
                 type="email" name="email"  value={formData.email}
                 onChange={handleChange}
                 placeholder="Email"
                 className="p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
+              {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
               <input
                 type="tel" name="tel"  value={formData.tel}
                 onChange={handleChange}
                 placeholder="Phone"
                 className="p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
+              {errors.tel && <p className="text-red-500 text-sm">{errors.tel}</p>}
+
               <textarea
                 placeholder="Message" name="message"  value={formData.message}
                 onChange={handleChange}
                 rows="4"
                 className="p-4 resize-none rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
               ></textarea>
+              {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
               <button
                 type="submit"                   
              
