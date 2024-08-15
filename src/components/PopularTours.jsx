@@ -94,7 +94,7 @@ const PopularTours= () => {
       rating: 4.7,
       duration: '10 Days, 9 Nights',
     },
-    // Add more tour packages as needed...
+    
   ];
 
   return (

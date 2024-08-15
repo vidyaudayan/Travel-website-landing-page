@@ -32,7 +32,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`fixed w-full h-24 z-50  transition-all duration-300 ${isScrolled ? 'bg-black py-2' : 'bg-transparent py-6'}`}>
+    <header className={`fixed w-full h-24 z-50 nav transition-all duration-300 ${isScrolled ? 'bg-black py-2' : 'bg-transparent py-6'}`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
       
         <div className="text-3xl mt-4 ml-4 font-bold text-white">

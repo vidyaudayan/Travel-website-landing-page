@@ -22,7 +22,7 @@
 }
 
 
-/* Custom animation for the cards */
+/*  animation for the cards */
 @keyframes slideIn {
   from {
     transform: translateX(-50%);
@@ -53,7 +53,7 @@
 }
 
 
-/* Animation for left-to-right loading */
+/* animation for left-to-right loading */
 @keyframes loadFromLeft {
   0% {
     transform: translateX(-50%);

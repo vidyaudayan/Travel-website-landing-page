@@ -8,32 +8,32 @@ import './carousel.css'
 import React from 'react'
 import Slider from "react-slick";
 
-
 const SampleNextArrow = (props) => {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={`${className} custom-arrow custom-next-arrow`}
-        style={{ ...style }}
-        onClick={onClick}
-      >
-        &rarr; {/* Right arrow icon */}
-      </div>
-    );
-  };
-  
-  const SamplePrevArrow = (props) => {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={`${className} custom-arrow custom-prev-arrow`}
-        style={{ ...style }}
-        onClick={onClick}
-      >
-        &larr; {/* Left arrow icon */}
-      </div>
-    );
-  };
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={`${className} custom-arrow custom-next-arrow`}
+      style={{ ...style }}
+      onClick={onClick}
+    >
+      &rarr; 
+    </div>
+  );
+};
+
+const SamplePrevArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={`${className} custom-arrow custom-prev-arrow`}
+      style={{ ...style }}
+      onClick={onClick}
+    >
+      &larr; 
+    </div>
+  );
+};
+
   
 
 const Hero = () => {

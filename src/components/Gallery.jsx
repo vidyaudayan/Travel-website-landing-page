@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import '../App.css'
 import image1 from '../assets/gallery1.jpg';
-import image2 from '../assets/gallery2.jpg';
+import image2 from '../assets/mal-gal7.jpg';
 import image3 from '../assets/gallery3.jpg';
 import image4 from '../assets/gal-aus1.jpg';
-import image5 from '../assets/gallery5.jpg';
+import image5 from '../assets/uro-gal7.jpg';
 import image6 from '../assets/gallery6.jpg';
 import image7 from '../assets/gallery7.jpg';
 import image8 from '../assets/gal-aus2.jpg';
-import image9 from '../assets/gallery9.jpg';
+import image9 from '../assets/uro-gal9.jpg';
 import image10 from '../assets/gal-aus3.jpg';
 import image11 from '../assets/gal-aus4.jpg';
 import image12 from '../assets/gal-aus5.jpg';
@@ -22,9 +22,24 @@ import image19 from '../assets/gal-so5.jpg';
 import image20 from '../assets/gal-so6.jpg';
 import image21 from '../assets/gal-so7.jpg';
 
+import image22 from '../assets/uro-gal1.jpg';
+import image23 from '../assets/uro-gal2.jpg';
+import image24 from '../assets/uro-gal3.jpg';
+import image25 from '../assets/uro-gal4.jpg';
+import image26 from '../assets/uro-gal5.jpg';
+import image27 from '../assets/uro-gal6.jpg';
+import image28 from '../assets/mal-gal1.jpg';
+import image29 from '../assets/mal-gal2.jpg';
+import image30 from '../assets/mal-gal3.jpg';
+import image31 from '../assets/mal-gal4.jpg';
+
+import image32 from '../assets/mal-gal5.jpg';
+import image33 from '../assets/mal-gal6.jpg';
+import { VscArchive } from 'react-icons/vsc';
+
 
 const Gallery = () => {
-  const [filter, setFilter] = useState('Australia');
+  const [filter, setFilter] = useState('all');
 
   const allImages = [
     { id: 1, src: image1, category: 'Europe' },
@@ -48,7 +63,15 @@ const Gallery = () => {
     { id: 19, src: image19, category: 'Southeast Asia' },
     { id: 20, src: image20, category: 'Southeast Asia' },
     { id: 21, src: image21, category: 'Southeast Asia' },
-    
+    { id: 22, src: image27, category: 'Europe' },
+    { id: 23, src: image23, category: 'Europe' },
+    { id: 24, src: image24, category: 'Europe' },
+    { id: 25, src: image25, category: 'Europe' },
+    { id: 26, src: image28, category: 'Maldives' },
+    { id: 27, src: image29, category: 'Maldives' },
+    { id: 28, src: image30, category: 'Maldives' },
+    { id: 29, src: image31, category: 'Maldives' },
+    { id: 30, src: image33, category: 'Maldives' },
   ];
 
   const filteredImages = filter === 'all' ? allImages : allImages.filter(img => img.category === filter);
